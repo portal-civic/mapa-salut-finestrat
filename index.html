@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="ca">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Mapa d’actius per a la salut · Finestrat</title>
+
+<style>
+:root{
+  --ink:#1f2a3a;
+  --muted:#5f6b7a;
+  --accent:#eb602e;
+  --line:#e7ebf1;
+  --bg:#ffffff;
+
+  --c-yellow:#ffeb00;
+  --c-green:#99f687;
+  --c-red:#eb602e;
+  --c-blue:#487bb6;
+}
+
+*{ box-sizing:border-box; }
+
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--ink);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont,
+               "SF Pro Text","SF Pro Display",
+               "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height:1.6;
+}
+
+/* Estructura principal */
+.page{
+  max-width:1440px;
+  margin:0 auto;
+  padding:60px 44px 0;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns: .9fr 1.1fr;
+  gap:44px;
+  align-items:start;
+}
+
+/* Textos */
+h1{
+  margin:0 0 24px 0;
+  font-weight:900;
+  letter-spacing:-0.8px;
+  line-height:0.95;
+  font-size:clamp(48px,5.5vw,88px);
+}
+
+.subtitle{
+  font-size:28px;
+  font-weight:650;
+  color:var(--accent);
+  margin:10px 0 26px 0;
+}
+
+.lead{
+  font-size:15px;
+  color:var(--muted);
+  max-width:62ch;
+  margin-bottom:16px;
+}
+
+.emph{
+  font-size:18px;
+  font-style:italic;
+  max-width:62ch;
+}
+.emph strong{
+  font-weight:800;
+  color:var(--ink);
+}
+
+/* Cercles de categories */
+.categories{
+  margin-top:34px;
+  display:flex;
+  gap:14px;
+  flex-wrap:wrap;
+  align-items:flex-start;
+  justify-content:center;
+}
+
+.circle{
+  width:100px;
+  height:100px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:14px;
+  font-size:12px;
+  line-height:1.1;
+  font-weight:850;
+  letter-spacing:-0.1px;
+  overflow:hidden;
+  word-break: break-word;
+  hyphens:auto;
+  box-shadow:0 6px 18px rgba(0,0,0,.08);
+}
+
+.yellow{ background:var(--c-yellow); color:#1f2a3a; }
+.green{  background:var(--c-green);  color:#1f2a3a; }
+.red{    background:var(--c-red);    color:#ffffff; }
+.blue{   background:var(--c-blue);   color:#ffffff; }
+
+/* Bloc del mapa */
+.mapBlock{
+  border:1px solid var(--line);
+  border-radius:16px;
+  overflow:hidden;
+  box-shadow:0 15px 40px rgba(0,0,0,.05);
+  background:#fff;
+}
+
+.mapHeader{
+  padding:18px;
+  background:#fafafa;
+  border-bottom:1px solid var(--line);
+  font-size:18px;
+  font-weight:650;
+  color:var(--accent);
+}
+
+.mapArea{
+  height:min(65vh, 680px);
+}
+
+.mapArea .flourish-embed,
+.mapArea .flourish-embed iframe{
+  width:100% !important;
+  height:100% !important;
+}
+
+/* Peu */
+.footer{
+  margin-top:70px;
+  padding-top:34px;
+  border-top:1px solid var(--line);
+  overflow:hidden;
+}
+
+.footerText{
+  font-size:12px;
+  color:var(--muted);
+  line-height:1.5;
+  margin-bottom:18px;
+}
+
+.logos{
+  display:flex;
+  gap:26px;
+  flex-wrap:wrap;
+  justify-content:center;
+  align-items:center;
+  margin-bottom:10px;
+}
+
+.logos img{
+  max-height:44px;
+  width:auto;
+}
+
+.footerIllustration{
+  display:block;
+  margin: 4px auto 0;
+  width: 100%;
+  max-width: 980px;
+  max-height: 240px;
+  object-fit: contain;
+  opacity:1;
+  filter:saturate(1.1) contrast(1.05);
+}
+
+/* Responsive */
+@media (max-width:1100px){
+  .page{ padding:38px 22px 0; }
+  .grid{ gap:26px; grid-template-columns:1fr; }
+  .mapArea{ height:520px; }
+}
+
+@media (max-width:900px){
+  .page{ padding:26px 14px 0; }
+  .grid{ grid-template-columns:1fr; gap:22px; }
+
+  .mapArea{ height:520px; }
+
+  .categories{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:14px;
+    justify-items:center;
+  }
+
+  .circle{
+    width:112px;
+    height:112px;
+    font-size:12px;
+    padding:16px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="page">
+
+  <div class="grid">
+
+    <section>
+      <h1>Finestrat<br>un actiu per a<br>la salut</h1>
+
+      <div class="subtitle">
+        Mapa d’actius per a la salut
+      </div>
+
+      <p class="lead">
+        El Mapa d’Actius per a la Salut és una eina per identificar i aprofitar els recursos
+        de salut de Finestrat. A través de la participació ciutadana, hem identificat
+        els recursos existents i les necessitats de millora per fer-los més accessibles.
+      </p>
+
+      <p class="emph">
+        Aquest mapa ajuda la ciutadania a conéixer i utilitzar els recursos disponibles
+        per millorar la salut física, mental i social.
+        <strong>La teua participació és important perquè junts fem de Finestrat
+        un municipi més saludable i accessible per a tothom.</strong>
+      </p>
+
+      <div class="categories">
+        <div class="circle yellow">Serveis socio-<br>sanitaris i<br>socials</div>
+        <div class="circle green">Espais naturals<br>i zones<br>verdes</div>
+        <div class="circle red">Equipaments<br>esportius i<br>culturals</div>
+        <div class="circle blue">Associacions i<br>iniciatives<br>locals</div>
+      </div>
+    </section>
+
+    <section class="mapBlock">
+      <div class="mapHeader">
+        Mapa d’actius i percepció ciutadana per a la promoció de la salut comunitària
+      </div>
+
+      <div class="mapArea">
+        <div class="flourish-embed flourish-map" data-src="visualisation/27489204">
+          <noscript>
+            <img src="https://public.flourish.studio/visualisation/27489204/thumbnail"
+                 width="100%" alt="Mapa d’actius de salut">
+          </noscript>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <div class="footer">
+
+    <div class="footerText">
+      Aquest projecte ha estat finançat per la Conselleria de Sanitat de la Generalitat Valenciana,
+      dins de la Convocatòria de les ajudes en matèria de projectes de desplegament del Pla de Salut
+      de la Comunitat Valenciana. El contingut d’aquesta publicació és responsabilitat exclusiva
+      de l’Ajuntament de Finestrat.
+    </div>
+
+    <div class="logos">
+      <img src="logo-ajuntament.png" alt="Ajuntament de Finestrat">
+      <img src="logo-mes-teu.png" alt="Finestrat més teu">
+      <img src="logo-finestrat.png" alt="Finestrat">
+      <img src="logo-pla-salut.png" alt="V Pla de Salut">
+      <img src="logo-generalitat.png" alt="Generalitat Valenciana">
+      <img src="logo-xarxasalut.png" alt="XarxaSalut">
+    </div>
+
+    <img src="finestrat-lineal.png"
+         class="footerIllustration"
+         alt="Il·lustració de Finestrat i el Puig Campana">
+
+  </div>
+
+</div>
+
+<script src="https://public.flourish.studio/resources/embed.js"></script>
+</body>
+</html>
