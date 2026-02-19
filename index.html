@@ -370,7 +370,7 @@ h1{
   }
 
   async function loadDict(lang) {
-    const url = `./i18n/${lang}.json`;
+   const url = `/mapa-salut-finestrat/i18n/${lang}.json`;
     const res = await fetch(url, { cache: "no-store" });
     if (!res.ok) throw new Error(`No s'ha pogut carregar ${url} (${res.status})`);
     return await res.json();
