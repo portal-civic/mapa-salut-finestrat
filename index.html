@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Mapa d’actius per a la salut · Finestrat</title>
+<title data-i18n="page.title">Mapa d’actius per a la salut · Finestrat</title>
 
 <style>
 :root{
@@ -15,7 +15,7 @@
   --bg:#ffffff;
 
   --c-yellow:#ffeb00;
-  --c-green:#99f687;
+  --c-green:#8ed581;
   --c-red:#eb602e;
   --c-blue:#487bb6;
 }
@@ -44,6 +44,39 @@ body{
   grid-template-columns: .9fr 1.1fr;
   gap:44px;
   align-items:start;
+}
+
+/* Selector idioma */
+.langBar{
+  display:flex;
+  justify-content:flex-end;
+  margin-bottom:14px;
+}
+.langSwitch{
+  display:inline-flex;
+  border:1px solid var(--line);
+  border-radius:999px;
+  overflow:hidden;
+  background:#fff;
+  box-shadow:0 6px 18px rgba(0,0,0,.06);
+}
+.langBtn{
+  appearance:none;
+  border:0;
+  background:transparent;
+  padding:10px 12px;
+  font-weight:700;
+  font-size:12px;
+  color:var(--muted);
+  cursor:pointer;
+  letter-spacing:.2px;
+}
+.langBtn + .langBtn{
+  border-left:1px solid var(--line);
+}
+.langBtn[aria-pressed="true"]{
+  color:var(--ink);
+  background:rgba(0,0,0,.04);
 }
 
 /* Textos */
@@ -97,14 +130,14 @@ h1{
   align-items:center;
   justify-content:center;
   text-align:center;
-  padding:14px;
-  font-size:12px;
-  line-height:1.1;
-  font-weight:850;
-  letter-spacing:-0.1px;
+  padding:18px;
+  font-size:11px;
+  line-height:1.2;
+  font-weight:700;
+  letter-spacing:0;
   overflow:hidden;
-  word-break: break-word;
-  hyphens:auto;
+  word-break: normal;
+  hyphens: none;
   box-shadow:0 6px 18px rgba(0,0,0,.08);
 }
 
@@ -186,6 +219,7 @@ h1{
   .page{ padding:38px 22px 0; }
   .grid{ gap:26px; grid-template-columns:1fr; }
   .mapArea{ height:520px; }
+  .langBar{ justify-content:flex-start; }
 }
 
 @media (max-width:900px){
@@ -215,46 +249,62 @@ h1{
 
 <div class="page">
 
+  <!-- Selector d'idioma -->
+  <div class="langBar">
+    <div class="langSwitch" role="group" aria-label="Selector d'idioma">
+      <button class="langBtn" type="button" data-lang="ca" aria-pressed="true">VA</button>
+      <button class="langBtn" type="button" data-lang="es" aria-pressed="false">ES</button>
+      <button class="langBtn" type="button" data-lang="en" aria-pressed="false">EN</button>
+    </div>
+  </div>
+
   <div class="grid">
 
     <section>
-      <h1>Finestrat<br>un actiu per a<br>la salut</h1>
+      <h1 data-i18n="hero.h1">Finestrat<br>un actiu per a<br>la salut</h1>
 
-      <div class="subtitle">
+      <div class="subtitle" data-i18n="hero.subtitle">
         Mapa d’actius per a la salut
       </div>
 
-      <p class="lead">
+      <p class="lead" data-i18n="hero.lead">
         El Mapa d’Actius per a la Salut és una eina per identificar i aprofitar els recursos
         de salut de Finestrat. A través de la participació ciutadana, hem identificat
         els recursos existents i les necessitats de millora per fer-los més accessibles.
       </p>
 
       <p class="emph">
-        Aquest mapa ajuda la ciutadania a conéixer i utilitzar els recursos disponibles
-        per millorar la salut física, mental i social.
-        <strong>La teua participació és important perquè junts fem de Finestrat
-        un municipi més saludable i accessible per a tothom.</strong>
+        <span data-i18n="hero.emphBefore">
+          Aquest mapa ajuda la ciutadania a conéixer i utilitzar els recursos disponibles
+          per millorar la salut física, mental i social.
+        </span>
+        <strong data-i18n="hero.emphStrong">
+          La teua participació és important perquè junts fem de Finestrat
+          un municipi més saludable i accessible per a tothom.
+        </strong>
       </p>
 
       <div class="categories">
-        <div class="circle yellow">Serveis socio-<br>sanitaris i<br>socials</div>
-        <div class="circle green">Espais naturals<br>i zones<br>verdes</div>
-        <div class="circle red">Equipaments<br>esportius i<br>culturals</div>
-        <div class="circle blue">Associacions i<br>iniciatives<br>locals</div>
+        <div class="circle yellow" data-i18n="cats.yellow">Serveis socio-<br>sanitaris i<br>socials</div>
+        <div class="circle green"  data-i18n="cats.green">Espais naturals<br>i zones<br>verdes</div>
+        <div class="circle red"    data-i18n="cats.red">Equipaments<br>esportius i<br>culturals</div>
+        <div class="circle blue"   data-i18n="cats.blue">Associacions i<br>iniciatives<br>locals</div>
       </div>
     </section>
 
     <section class="mapBlock">
-      <div class="mapHeader">
+      <div class="mapHeader" data-i18n="map.header">
         Mapa d’actius i percepció ciutadana per a la promoció de la salut comunitària
       </div>
 
       <div class="mapArea">
         <div class="flourish-embed flourish-map" data-src="visualisation/27489204">
           <noscript>
-            <img src="https://public.flourish.studio/visualisation/27489204/thumbnail"
-                 width="100%" alt="Mapa d’actius de salut">
+            <img
+              src="https://public.flourish.studio/visualisation/27489204/thumbnail"
+              width="100%"
+              alt="Mapa d’actius de salut"
+              data-i18n-attr="alt:alts.mapThumb">
           </noscript>
         </div>
       </div>
@@ -264,7 +314,7 @@ h1{
 
   <div class="footer">
 
-    <div class="footerText">
+    <div class="footerText" data-i18n="footer.text">
       Aquest projecte ha estat finançat per la Conselleria de Sanitat de la Generalitat Valenciana,
       dins de la Convocatòria de les ajudes en matèria de projectes de desplegament del Pla de Salut
       de la Comunitat Valenciana. El contingut d’aquesta publicació és responsabilitat exclusiva
@@ -272,22 +322,116 @@ h1{
     </div>
 
     <div class="logos">
-      <img src="logo-ajuntament.png" alt="Ajuntament de Finestrat">
-      <img src="logo-mes-teu.png" alt="Finestrat més teu">
-      <img src="logo-finestrat.png" alt="Finestrat">
-      <img src="logo-pla-salut.png" alt="V Pla de Salut">
-      <img src="logo-generalitat.png" alt="Generalitat Valenciana">
-      <img src="logo-xarxasalut.png" alt="XarxaSalut">
+      <img src="logo-ajuntament.png" alt="Ajuntament de Finestrat" data-i18n-attr="alt:alts.logoAjuntament">
+      <img src="logo-mes-teu.png" alt="Finestrat més teu" data-i18n-attr="alt:alts.logoMesTeu">
+      <img src="logo-finestrat.png" alt="Finestrat" data-i18n-attr="alt:alts.logoFinestrat">
+      <img src="logo-pla-salut.png" alt="V Pla de Salut" data-i18n-attr="alt:alts.logoPlaSalut">
+      <img src="logo-generalitat.png" alt="Generalitat Valenciana" data-i18n-attr="alt:alts.logoGeneralitat">
+      <img src="logo-xarxasalut.png" alt="XarxaSalut" data-i18n-attr="alt:alts.logoXarxaSalut">
     </div>
 
-    <img src="finestrat-lineal.png"
-         class="footerIllustration"
-         alt="Il·lustració de Finestrat i el Puig Campana">
+    <img
+      src="finestrat-lineal.png"
+      class="footerIllustration"
+      alt="Il·lustració de Finestrat i el Puig Campana"
+      data-i18n-attr="alt:alts.footerIllustration">
 
   </div>
 
 </div>
 
 <script src="https://public.flourish.studio/resources/embed.js"></script>
+
+<script>
+/* i18n simple (1 pàgina): carrega /i18n/{lang}.json i substituïx [data-i18n] i [data-i18n-attr] */
+(function () {
+  const SUPPORTED = ["ca", "es", "en"];
+  const DEFAULT_LANG = "ca";
+
+  function getInitialLang() {
+    const urlLang = new URLSearchParams(window.location.search).get("lang");
+    if (SUPPORTED.includes(urlLang)) return urlLang;
+
+    const stored = localStorage.getItem("lang");
+    if (SUPPORTED.includes(stored)) return stored;
+
+    const htmlLang = (document.documentElement.getAttribute("lang") || "").toLowerCase();
+    if (SUPPORTED.includes(htmlLang)) return htmlLang;
+
+    const nav = (navigator.language || "").slice(0, 2).toLowerCase();
+    if (SUPPORTED.includes(nav)) return nav;
+
+    return DEFAULT_LANG;
+  }
+
+  function getByPath(obj, path) {
+    return path.split(".").reduce((acc, key) => (acc && acc[key] != null ? acc[key] : null), obj);
+  }
+
+  async function loadDict(lang) {
+    const url = `./i18n/${lang}.json`;
+    const res = await fetch(url, { cache: "no-store" });
+    if (!res.ok) throw new Error(`No s'ha pogut carregar ${url} (${res.status})`);
+    return await res.json();
+  }
+
+  function applyText(dict) {
+    document.querySelectorAll("[data-i18n]").forEach((el) => {
+      const key = el.getAttribute("data-i18n");
+      const value = getByPath(dict, key);
+      if (typeof value === "string") el.innerHTML = value; // permet <br>
+    });
+
+    document.querySelectorAll("[data-i18n-attr]").forEach((el) => {
+      const spec = el.getAttribute("data-i18n-attr"); // ex: "alt:alts.logoAjuntament"
+      const parts = spec.split(";").map(s => s.trim()).filter(Boolean);
+      parts.forEach((p) => {
+        const [attr, key] = p.split(":").map(s => s.trim());
+        const value = getByPath(dict, key);
+        if (attr && typeof value === "string") el.setAttribute(attr, value);
+      });
+    });
+
+    const titleKey = "page.title";
+    const newTitle = getByPath(dict, titleKey);
+    if (typeof newTitle === "string") document.title = newTitle;
+  }
+
+  function setButtonsState(lang) {
+    document.querySelectorAll(".langBtn").forEach((btn) => {
+      btn.setAttribute("aria-pressed", btn.dataset.lang === lang ? "true" : "false");
+    });
+  }
+
+  async function setLang(lang) {
+    if (!SUPPORTED.includes(lang)) lang = DEFAULT_LANG;
+
+    const dict = await loadDict(lang);
+    applyText(dict);
+
+    document.documentElement.setAttribute("lang", lang);
+    localStorage.setItem("lang", lang);
+    setButtonsState(lang);
+
+    // Opcional: manté la URL neta o actualitza querystring
+    const u = new URL(window.location.href);
+    u.searchParams.set("lang", lang);
+    window.history.replaceState({}, "", u.toString());
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll(".langBtn").forEach((btn) => {
+      btn.addEventListener("click", () => setLang(btn.dataset.lang));
+    });
+
+    setLang(getInitialLang()).catch((err) => {
+      console.error(err);
+      // Si falla la càrrega, deixa el contingut per defecte en CA.
+      setButtonsState(DEFAULT_LANG);
+    });
+  });
+})();
+</script>
+
 </body>
 </html>
