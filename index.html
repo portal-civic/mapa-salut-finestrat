@@ -343,25 +343,26 @@ h1{
 <script src="https://public.flourish.studio/resources/embed.js"></script>
 
 <script>
-/* i18n simple (1 pàgina): carrega /i18n/{lang}.json i substituïx [data-i18n] i [data-i18n-attr] */
+/* i18n simple (1 pàgina): carrega ./i18n/{lang}.json i substituïx [data-i18n] i [data-i18n-attr]
+   Canvis clau:
+   - Default sempre "ca"
+   - NO escriu ?lang=... en carregar (només quan cliques)
+   - Si falla un JSON, no trenca el canvi (es queda com estava)
+*/
 (function () {
-  const SUPPORTED = ["ca", "es", "en"];
+  const SUPPORTED = new Set(["ca", "es", "en"]);
   const DEFAULT_LANG = "ca";
 
-  function getInitialLang() {
+  function normalizeLang(raw) {
+    if (!raw) return null;
+    raw = String(raw).toLowerCase().trim();
+    const base = raw.split(/[-_]/)[0];
+    return SUPPORTED.has(base) ? base : null;
+  }
+
+  function getLangFromQuery() {
     const urlLang = new URLSearchParams(window.location.search).get("lang");
-    if (SUPPORTED.includes(urlLang)) return urlLang;
-
-    const stored = localStorage.getItem("lang");
-    if (SUPPORTED.includes(stored)) return stored;
-
-    const htmlLang = (document.documentElement.getAttribute("lang") || "").toLowerCase();
-    if (SUPPORTED.includes(htmlLang)) return htmlLang;
-
-    const nav = (navigator.language || "").slice(0, 2).toLowerCase();
-    if (SUPPORTED.includes(nav)) return nav;
-
-    return DEFAULT_LANG;
+    return normalizeLang(urlLang);
   }
 
   function getByPath(obj, path) {
@@ -392,8 +393,7 @@ h1{
       });
     });
 
-    const titleKey = "page.title";
-    const newTitle = getByPath(dict, titleKey);
+    const newTitle = getByPath(dict, "page.title");
     if (typeof newTitle === "string") document.title = newTitle;
   }
 
@@ -403,32 +403,49 @@ h1{
     });
   }
 
-  async function setLang(lang) {
-    if (!SUPPORTED.includes(lang)) lang = DEFAULT_LANG;
-
-    const dict = await loadDict(lang);
-    applyText(dict);
-
+  function setHtmlLang(lang) {
     document.documentElement.setAttribute("lang", lang);
-    localStorage.setItem("lang", lang);
-    setButtonsState(lang);
+  }
 
-    // Opcional: manté la URL neta o actualitza querystring
+  function updateURL(lang) {
     const u = new URL(window.location.href);
     u.searchParams.set("lang", lang);
     window.history.replaceState({}, "", u.toString());
   }
 
+  let currentLang = DEFAULT_LANG;
+
+  async function setLang(lang, { updateUrl = false } = {}) {
+    lang = normalizeLang(lang) || DEFAULT_LANG;
+
+    try {
+      const dict = await loadDict(lang);
+      applyText(dict);
+      setHtmlLang(lang);
+      setButtonsState(lang);
+      currentLang = lang;
+
+      if (updateUrl) updateURL(lang);
+    } catch (err) {
+      console.error(err);
+      // si falla, manté l'idioma actual i botons coherents
+      setHtmlLang(currentLang);
+      setButtonsState(currentLang);
+    }
+  }
+
   document.addEventListener("DOMContentLoaded", () => {
+    // Click dels botons: canvia idioma i SÍ actualitza URL
     document.querySelectorAll(".langBtn").forEach((btn) => {
-      btn.addEventListener("click", () => setLang(btn.dataset.lang));
+      btn.addEventListener("click", () => setLang(btn.dataset.lang, { updateUrl: true }));
     });
 
-    setLang(getInitialLang()).catch((err) => {
-      console.error(err);
-      // Si falla la càrrega, deixa el contingut per defecte en CA.
-      setButtonsState(DEFAULT_LANG);
-    });
+    // INIT: respecta ?lang=... si existeix; si no, CA (sense tocar URL)
+    const initial = getLangFromQuery() || DEFAULT_LANG;
+    currentLang = initial;
+    setButtonsState(initial);
+    setHtmlLang(initial);
+    setLang(initial, { updateUrl: false });
   });
 })();
 </script>
