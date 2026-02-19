@@ -1,0 +1,34 @@
+{
+  "page": {
+    "title": "Health Assets Map · Finestrat"
+  },
+  "hero": {
+    "h1": "Finestrat<br>an asset for<br>health",
+    "subtitle": "Health assets map",
+    "lead": "The Health Assets Map is a tool to identify and make the most of Finestrat’s health resources. Through citizen participation, we have identified existing resources and areas for improvement to make them more accessible.",
+    "emphBefore": "This map helps residents discover and use the resources available to improve physical, mental and social wellbeing.",
+    "emphStrong": "Your participation matters—together we can make Finestrat a healthier and more accessible town for everyone."
+  },
+  "cats": {
+    "yellow": "Social and<br>health<br>services",
+    "green": "Natural spaces<br>and green<br>areas",
+    "red": "Sports and<br>cultural<br>facilities",
+    "blue": "Associations and<br>local<br>initiatives"
+  },
+  "map": {
+    "header": "Assets map and citizen perception for promoting community health"
+  },
+  "footer": {
+    "text": "This project has been funded by the Regional Ministry of Health of the Generalitat Valenciana, under the call for grants related to the deployment of the Health Plan of the Valencian Community. The content of this publication is the sole responsibility of the Town Council of Finestrat."
+  },
+  "alts": {
+    "mapThumb": "Health assets map",
+    "logoAjuntament": "Finestrat Town Council",
+    "logoMesTeu": "Finestrat més teu",
+    "logoFinestrat": "Finestrat",
+    "logoPlaSalut": "5th Health Plan",
+    "logoGeneralitat": "Generalitat Valenciana",
+    "logoXarxaSalut": "XarxaSalut",
+    "footerIllustration": "Illustration of Finestrat and Puig Campana"
+  }
+}
