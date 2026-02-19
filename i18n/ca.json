@@ -1,0 +1,34 @@
+{
+  "page": {
+    "title": "Mapa d’actius per a la salut · Finestrat"
+  },
+  "hero": {
+    "h1": "Finestrat<br>un actiu per a<br>la salut",
+    "subtitle": "Mapa d’actius per a la salut",
+    "lead": "El Mapa d’Actius per a la Salut és una eina per identificar i aprofitar els recursos de salut de Finestrat. A través de la participació ciutadana, hem identificat els recursos existents i les necessitats de millora per fer-los més accessibles.",
+    "emphBefore": "Aquest mapa ajuda la ciutadania a conéixer i utilitzar els recursos disponibles per millorar la salut física, mental i social.",
+    "emphStrong": "La teua participació és important perquè junts fem de Finestrat un municipi més saludable i accessible per a tothom."
+  },
+  "cats": {
+    "yellow": "Serveis socio-<br>sanitaris i<br>socials",
+    "green": "Espais naturals<br>i zones<br>verdes",
+    "red": "Equipaments<br>esportius i<br>culturals",
+    "blue": "Associacions i<br>iniciatives<br>locals"
+  },
+  "map": {
+    "header": "Mapa d’actius i percepció ciutadana per a la promoció de la salut comunitària"
+  },
+  "footer": {
+    "text": "Aquest projecte ha estat finançat per la Conselleria de Sanitat de la Generalitat Valenciana, dins de la Convocatòria de les ajudes en matèria de projectes de desplegament del Pla de Salut de la Comunitat Valenciana. El contingut d’aquesta publicació és responsabilitat exclusiva de l’Ajuntament de Finestrat."
+  },
+  "alts": {
+    "mapThumb": "Mapa d’actius de salut",
+    "logoAjuntament": "Ajuntament de Finestrat",
+    "logoMesTeu": "Finestrat més teu",
+    "logoFinestrat": "Finestrat",
+    "logoPlaSalut": "V Pla de Salut",
+    "logoGeneralitat": "Generalitat Valenciana",
+    "logoXarxaSalut": "XarxaSalut",
+    "footerIllustration": "Il·lustració de Finestrat i el Puig Campana"
+  }
+}
