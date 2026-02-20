@@ -3,30 +3,30 @@
     "title": "Health Assets Map · Finestrat"
   },
   "hero": {
-    "h1": "Finestrat<br>an asset for<br>health",
+    "h1": "Finestrat<br>a health asset<br>for the community",
     "subtitle": "Health assets map",
-    "lead": "The Health Assets Map is a tool to identify and make the most of Finestrat’s health resources. Through citizen participation, we have identified existing resources and areas for improvement to make them more accessible.",
-    "emphBefore": "This map helps residents discover and use the resources available to improve physical, mental and social wellbeing.",
-    "emphStrong": "We can make Finestrat a healthier and more accessible town for everyone."
+    "lead": "The Health Assets Map is a tool that identifies and highlights the resources in Finestrat that contribute to the well-being of the population. Through a participatory process, both existing assets and opportunities for improvement have been identified to enhance access and use.",
+    "emphBefore": "This map helps people discover the spaces, services and initiatives that support physical, mental and social health. It is an invitation to explore them, integrate them into your daily life and continue moving towards a healthier and more inclusive Finestrat.",
+    "emphStrong": "Make the most of your municipality’s health assets."
   },
   "cats": {
-    "yellow": "Social and<br>health<br>services",
+    "yellow": "Social and<br>healthcare<br>services",
     "green": "Natural spaces<br>and green<br>areas",
     "red": "Sports and<br>cultural<br>facilities",
     "blue": "Associations and<br>local<br>initiatives"
   },
   "map": {
-    "header": "Assets map and citizen perception for promoting community health"
+    "header": "Health assets map and citizen perception for community health promotion"
   },
   "footer": {
-    "text": "This project has been funded by the Conselleria de Sanitat of the Generalitat Valenciana, under the call for grants related to the deployment of the Health Plan of the Valencian Community. The content of this publication is the sole responsibility of the Town Council of Finestrat."
+    "text": "This project has been funded by the Department of Health of the Generalitat Valenciana under the call for projects for the implementation of the Community Health Plan. The content of this publication is the sole responsibility of Finestrat Town Council."
   },
   "alts": {
     "mapThumb": "Health assets map",
     "logoAjuntament": "Finestrat Town Council",
-    "logoMesTeu": "Finestrat més teu",
+    "logoMesTeu": "Finestrat more yours",
     "logoFinestrat": "Finestrat",
-    "logoPlaSalut": "5th Health Plan",
+    "logoPlaSalut": "V Health Plan",
     "logoGeneralitat": "Generalitat Valenciana",
     "logoXarxaSalut": "XarxaSalut",
     "footerIllustration": "Illustration of Finestrat and Puig Campana"

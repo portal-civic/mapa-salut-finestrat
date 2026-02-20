@@ -5,9 +5,9 @@
   "hero": {
     "h1": "Finestrat<br>un activo para<br>la salud",
     "subtitle": "Mapa de activos para la salud",
-    "lead": "El Mapa de Activos para la Salud es una herramienta para identificar y aprovechar los recursos de salud de Finestrat. A través de la participación ciudadana, hemos identificado los recursos existentes y las necesidades de mejora para hacerlos más accesibles.",
-    "emphBefore": "Este mapa ayuda a la ciudadanía a conocer y utilizar los recursos disponibles para mejorar la salud física, mental y social.",
-    "emphStrong": "Hagamos de Finestrat un municipio más saludable y accesible para todas las personas."
+    "lead": "El Mapa de Activos para la Salud es una herramienta que recoge y pone en valor los recursos de Finestrat que contribuyen al bienestar de la población. A partir de un proceso participativo, se han identificado tanto los activos existentes como las oportunidades de mejora para facilitar su acceso y uso.",
+    "emphBefore": "Este mapa permite conocer mejor los espacios, servicios e iniciativas que favorecen la salud física, mental y social. Es una invitación a descubrirlos, integrarlos en tu día a día y seguir avanzando hacia un Finestrat más saludable e inclusivo.",
+    "emphStrong": "Aprovecha los activos de salud de tu municipio."
   },
   "cats": {
     "yellow": "Servicios socio-<br>sanitarios y<br>sociales",
@@ -24,7 +24,7 @@
   "alts": {
     "mapThumb": "Mapa de activos de salud",
     "logoAjuntament": "Ayuntamiento de Finestrat",
-    "logoMesTeu": "Finestrat més teu",
+    "logoMesTeu": "Finestrat más tuyo",
     "logoFinestrat": "Finestrat",
     "logoPlaSalut": "V Plan de Salud",
     "logoGeneralitat": "Generalitat Valenciana",
