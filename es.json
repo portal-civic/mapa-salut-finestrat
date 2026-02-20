@@ -1,0 +1,34 @@
+{
+  "page": {
+    "title": "Mapa de activos para la salud · Finestrat"
+  },
+  "hero": {
+    "h1": "Finestrat<br>un activo para<br>la salud",
+    "subtitle": "Mapa de activos para la salud",
+    "lead": "El Mapa de Activos para la Salud es una herramienta que recoge y pone en valor los recursos de Finestrat que contribuyen al bienestar de la población. A partir de un proceso participativo, se han identificado tanto los activos existentes como las oportunidades de mejora para facilitar su acceso y uso.",
+    "emphBefore": "Este mapa permite conocer mejor los espacios, servicios e iniciativas que favorecen la salud física, mental y social. Es una invitación a descubrirlos, integrarlos en tu día a día y seguir avanzando hacia un Finestrat más saludable e inclusivo.",
+    "emphStrong": "Aprovecha los activos de salud de tu municipio."
+  },
+  "cats": {
+    "yellow": "Servicios socio-<br>sanitarios y<br>sociales",
+    "green": "Espacios naturales<br>y zonas<br>verdes",
+    "red": "Equipamientos<br>deportivos y<br>culturales",
+    "blue": "Asociaciones e<br>iniciativas<br>locales"
+  },
+  "map": {
+    "header": "Mapa de activos y percepción ciudadana para la promoción de la salud comunitaria"
+  },
+  "footer": {
+    "text": "Este proyecto ha sido financiado por la Conselleria de Sanidad de la Generalitat Valenciana, dentro de la Convocatoria de ayudas en materia de proyectos de despliegue del Plan de Salud de la Comunitat Valenciana. El contenido de esta publicación es responsabilidad exclusiva del Ayuntamiento de Finestrat."
+  },
+  "alts": {
+    "mapThumb": "Mapa de activos de salud",
+    "logoAjuntament": "Ayuntamiento de Finestrat",
+    "logoMesTeu": "Finestrat más tuyo",
+    "logoFinestrat": "Finestrat",
+    "logoPlaSalut": "V Plan de Salud",
+    "logoGeneralitat": "Generalitat Valenciana",
+    "logoXarxaSalut": "XarxaSalut",
+    "footerIllustration": "Ilustración de Finestrat y el Puig Campana"
+  }
+}
