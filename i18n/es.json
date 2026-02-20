@@ -16,7 +16,9 @@
     "blue": "Asociaciones e<br>iniciativas<br>locales"
   },
   "map": {
-    "header": "Mapa de activos y percepción ciudadana para la promoción de la salud comunitaria"
+  "header": "Mapa de activos y percepción ciudadana para la promoción de la salud comunitaria",
+  "hint": "Puedes ampliar el mapa, seleccionar los activos y consultar cómo llegar."
+  
   },
   "footer": {
     "text": "Este proyecto ha sido financiado por la Conselleria de Sanidad de la Generalitat Valenciana, dentro de la Convocatoria de ayudas en materia de proyectos de despliegue del Plan de Salud de la Comunitat Valenciana. El contenido de esta publicación es responsabilidad exclusiva del Ayuntamiento de Finestrat."

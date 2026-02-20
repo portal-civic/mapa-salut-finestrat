@@ -15,8 +15,10 @@
     "red": "Sports and<br>cultural<br>facilities",
     "blue": "Associations and<br>local<br>initiatives"
   },
-  "map": {
-    "header": "Health assets map and citizen perception for community health promotion"
+"map": {
+  "header": "Health assets map and citizen perception for community health promotion",
+  "hint": "You can zoom in on the map, select assets and check how to get there."
+
   },
   "footer": {
     "text": "This project has been funded by the Department of Health of the Generalitat Valenciana under the call for projects for the implementation of the Community Health Plan. The content of this publication is the sole responsibility of Finestrat Town Council."
