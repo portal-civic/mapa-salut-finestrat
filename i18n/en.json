@@ -1,4 +1,4 @@
-{
+a{
   "page": {
     "title": "Health Assets Map · Finestrat"
   },
@@ -19,7 +19,7 @@
     "header": "Assets map and citizen perception for promoting community health"
   },
   "footer": {
-    "text": "This project has been funded by the Regional Ministry of Health of the Generalitat Valenciana, under the call for grants related to the deployment of the Health Plan of the Valencian Community. The content of this publication is the sole responsibility of the Town Council of Finestrat."
+    "text": "This project has been funded by the Conselleria de Sanitat of the Generalitat Valenciana, under the call for grants related to the deployment of the Health Plan of the Valencian Community. The content of this publication is the sole responsibility of the Town Council of Finestrat."
   },
   "alts": {
     "mapThumb": "Health assets map",
